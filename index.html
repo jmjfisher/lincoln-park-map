@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      
+        <meta name="viewport" content="width=device-width">
+        <meta charset="utf-8">
+        
+        <title>Lincoln Park</title>
+      
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css">
+        <link rel="stylesheet" href="css/style.css"/>
+
+    </head>
+    <body>
+        <div id="overlay">
+            <div class="center"id="popup">
+                <div id="close-about">X</div>
+                <p>This application will help you navigate <a href="http://www.manitowoc.org/Facilities/Facility/Details/8" target="_blank"><b>Manitowoc Lincoln Park</b></a>!</p>
+                <p>The park offers tennis courts, a softball field, a zoo, plenty of parking, and cabins to rent for your upcoming events. Click to drop a pin and use the <i>Search</i> function to find which of these amenities you desire is nearest to you.</p>
+                <p>Notice something wrong? Have a question or suggestion? You may also leave a note for the Parks and Recreation Department at a pin's location using the <i>Comment</i> function. Click the <i>Home</i> button at any time to reset the map to its original state.</p>
+                <p>No matter what you're here for, enjoy your time in the park!</p>
+                <a href="http://manitowoc.org/" target="_blank"><img src="img/manty.jpg" class="center" height="200px"></a>
+            </div>
+        </div>
+        <div id="header">
+            <h3 id="title">Manitowoc Lincoln Park</h3>
+        </div>
+        <div id="map"></div>
+        <div id="box">
+            <p class="location">Click within the park to update the following location:&nbsp;</p>
+            <p class="location" id="coords"></p>
+            <br>
+            <div id = "comment-div">
+                <form class="submit">
+                    Type: <select id="type">
+                        <option disabled selected value> -- (optional) -- </option>
+                        <option value="Maintenance">Maintenance</option>
+                        <option value="Recreation">Recreation</option>
+                        <option value="Safety">Safety</option>
+                        <option value="Question">Question</option>
+                    </select>
+                    Amenity: <select id="entity">
+                        <option disabled selected value> -- (optional) -- </option>
+                    </select>
+                    &nbsp;Comment: <input type="text" id="comment">
+                    &nbsp;Email: <input type="text" id="email" value="(optional)">
+                </form>
+                <button class="submit button" type="button" id="add-button">Submit</button>
+                <button class="submit button" type="button" id="cancel-comment-button">Cancel</button>
+            </div>
+            <div id = "nearest-div">
+                <p class="submit">Locate the Nearest: </p>
+                <button class="submit button" type="button" id="rest-button">Restroom</button>
+                <button class="submit button" type="button" id="park-button">Parking Lot</button>
+                <button class="submit button" type="button" id="build-button">Building</button>
+                <button class="submit button" type="button" id="rec-button">Recreation</button>
+            </div>
+        </div>
+        <div id="service-div">
+            <p class="submit">Please insert the Parks and Rec Service password: </p>
+            <input class="submit" type="password" id="password">
+            <button class="submit button" type="button" id="pass-sub">Submit</button>
+            <button class="submit button" type="button" id="pass-cancel">Cancel</button>
+        </div>
+        <div id="alert-div">
+            <p class="submit"id="alert-p">Testing text</p>
+            <button class="submit button" type="button" id="close">Close</button>
+        </div>
+        <div id="service-alert-div">
+            <p class="submit"id="service-alert-p">Are you finished with this comment? </p>
+            <button class="submit button" type="button" id="yes-button">Yes</button>
+            <button class="submit button" type="button" id="no-button">No</button>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+        <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+        <script src="https://cartodb-libs.global.ssl.fastly.net/carto.js/v4.0.8/carto.min.js"></script>
+        <script type='text/javascript' src='config.js'></script>
+        <script type="text/javascript" src="js/main.js"></script>
+      
+    </body>
+</html>

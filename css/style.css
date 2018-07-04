@@ -1,0 +1,135 @@
+* {
+    font-family: Open Sans;
+}
+
+.button {
+    background-color: #286524;
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#header {
+    height: 7vh;
+    background-color: #286524;
+}
+
+#title {
+    color:white;
+    padding: 5px;
+}
+
+#map {
+    width: 100%;
+    height: 93vh;
+    z-index: 0;
+    text-align: center;
+    border-bottom: 2px solid #286524;
+}
+
+#box {
+    position: absolute;
+    padding: 5px;
+    width: 100%;
+    z-index: 200;
+    background-color: white;
+    display: none;
+}
+
+#service-div {
+    position: absolute;
+    padding-top: 5px;
+    padding-left: 5px;
+    width: 100%;
+    z-index: 200;
+    background-color: white;
+    display: none;
+}
+
+#alert-div {
+    position: absolute;
+    right: 0px;
+    bottom: 47vh;
+    height: 8vh;
+    line-height: 5vh;
+    text-align: left;
+    padding: 5px;
+    max-width: 80%;
+    z-index: 200;
+    background-color: white;
+    opacity: 0.8;
+    display: none;
+}
+
+#service-alert-div {
+    position: absolute;
+    right: 0px;
+    bottom: 17vh;
+    height: 8vh;
+    line-height: 5vh;
+    text-align: left;
+    padding: 5px;
+    max-width: 80%;
+    z-index: 200;
+    background-color: white;
+    opacity: 0.9;
+    display: none;
+}
+
+#comment-div {
+    display: none;
+}
+
+#nearest-div {
+    display: none;
+}
+
+.location, .submit {
+    display: inline-block
+}
+
+#comment-button, #nearest-button {
+    height: 36px;
+    width: 36px;
+    font-size: 26px;
+}
+
+#overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    z-index: 999999;
+}
+
+#popup {
+    max-width: 700px;
+    width: 80%;
+    max-height: 700px;
+    height: 80%;
+    padding: 20px;
+    position: relative;
+    background: #fff;
+    margin: 40px auto;
+}
+
+#close-about {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #000;
+}
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
